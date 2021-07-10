@@ -1,1 +1,1 @@
-# top_rps
+# Using javascript to make rock, paper, scissors game!
