@@ -1,34 +1,34 @@
 function computerPlay() {
-    const computerRps = ["Rock", "Paper", "Scissors"];
-    var computerRandom = Math.floor(Math.random() * computerRps.length);
+    const rpsRandom = ["Rock", "Paper", "Scissors"];
+    const computerChoice = rpsRandom[Math.floor(Math.random() * rpsRandom.length)];
+    console.log(computerChoice);
     }
 
-function playRound(playerRps, computerRps) {
-    //Still must make playerRps input case-insensitive.
-    const computerRps = computerPlay();
-    const playerRps = input("Rock, paper, or scissors?");
+function playRound(playerChoice, computerChoice) {
+    var playerChoice = input("Rock, paper, or scissors?");
+    const computerChoice = computerPlay();
 
-    if (playerRps = computerRps) {
-        return "It's draw game!";
+    if (playerChoice = computerChoice) {
+        return "It's a draw game!";
     }
-
-    if (playerRps = "Rock" && computerRps = "Scissors") {
+    //Condition for user wins
+    if (playerchoice = "Rock" && computerChoice = "Scissors") {
         return "You win! Rock beats scissors.";
     }
-        else if (playerRps = "Paper" && computerRps = "Rock") {
+        else if (playerChoice = "Paper" && computerChoice = "Rock") {
             return "You win! Paper beats rock.";
         }
-        else if (playerRps = "Scissors" && computerRps = "Paper") {
+        else if (playerChoice = "Scissors" && computerChoice = "Paper") {
             return "You win! Scissors beats rock.";
         }
-
-    if (playerRps = "Scissors" && computerRps = "Rock") {
+    //Condition for computer wins 
+    if (playerChoice = "Scissors" && computerChoice = "Rock") {
         return "You lose! Rock beats scissors.";
     }
-        else if (playerRps = "Rock" && computerRps = "Paper") {
+        else if (playerChoice = "Rock" && computerChoice = "Paper") {
             return "You lose! Paper beats rock.";
         }
-        else if (playerRps = "Paper" && computerRps = "Scissors") {
+        else if (playerChoice = "Paper" && computerChoice = "Scissors") {
             return "You lose! Scissors beat paper.";
         }
         else {
