@@ -1,23 +1,20 @@
 const playerChoice = prompt("Rock, paper, or scissors?");
 const computerChoice = computerPlay();
-computerPlay();
-playRound();
-console.log(playRound(playerChoice, computerChoice));
+console.log(playRound());
 
 function computerPlay() {
     const rpsRandom = ["Rock", "Paper", "Scissors"];
-    const computerChoice = rpsRandom[Math.floor(Math.random() * rpsRandom.length)];
+    return rpsRandom[Math.floor(Math.random() * rpsRandom.length)];
     //console.log(computerChoice);
 }
 
-function playRound(playerChoice, computerChoice) {
+function playRound() {
     //Condition for draw games
-    if (playerChoice = computerChoice) {
+    if (playerChoice == computerChoice) {
         return "It's a draw game!";
     }
     //Condition for user wins
-    //playerchoice currently not defined
-    if (playerchoice == "Rock" && computerChoice == "Scissors") {
+    if (playerChoice == "Rock" && computerChoice == "Scissors") {
         return "You win! Rock beats scissors.";
     }
         else if (playerChoice == "Paper" && computerChoice == "Rock") {
