@@ -80,7 +80,7 @@ function game() {
         return "Player: " + playerScore + '\n'
                     "Computer: " + computerScore + '\n'
                     "Draw game(s): " + drawGame;
-        //Should I add a repeat function here?        
+        //Should I add a repeat function here instead of calling 5 rounds?        
     }
 
     function alertFinalResult() {
