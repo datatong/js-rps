@@ -28,51 +28,50 @@ function game() {
     function playRound() {
         //Condition for draw games
         if (playerChoice == computerChoice) {
-            return "It's a draw!";
             round++;
             drawGame++;
+            return "It's a draw!"
         }
         //Condition for user wins
         if (playerChoice == "ROCK" && computerChoice == "Scissors") {
-            return "You win! Rock beats scissors.";
             round++;
             playerScore++;
+            return "You win! Rock beats scissors.";
         }
             else if (playerChoice == "PAPER" && computerChoice == "Rock") {
-                return "You win! Paper beats rock.";
                 round++;
                 playerScore++;
+                return "You win! Paper beats rock.";
             }
             else if (playerChoice == "SCISSORS" && computerChoice == "Paper") {
-                return "You win! Scissors beats rock.";
                 round++;
                 playerScore++;
+                return "You win! Scissors beats rock.";
             }
         //Condition for computer wins 
         if (playerChoice == "SCISSORS" && computerChoice == "Rock") {
-            return "You lose! Rock beats scissors.";
             round++;
             computerScore++;
+            return "You lose! Rock beats scissors.";
         }
             else if (playerChoice == "ROCK" && computerChoice == "Paper") {
-                return "You lose! Paper beats rock.";
                 round++;
                 computerScore++;
+                return "You lose! Paper beats rock.";
             }
             else if (playerChoice == "PAPER" && computerChoice == "Scissors") {
-                return "You lose! Scissors beat paper.";
                 round++;
                 computerScore++;
+                return "You lose! Scissors beat paper.";
             }
             else {
                 alert("Invalid input. Try again.");
             }
 
-        return `Round ${round} completed!`;
-        return "Player: " + playerScore + '\n'
-                    "Computer: " + computerScore + '\n'
-                    "Draw game(s): " + drawGame;
-        //Probably could add a repeat function here instead of calling 5 rounds?        
+        return `Round ${round} completed! + '\n'
+                    Player: ${playerScore} + '\n'
+                    Computer: ${computerScore} + '\n'
+                    Draw game(s): ${drawGame}`;      
     }
 
     function alertFinalResult() {
