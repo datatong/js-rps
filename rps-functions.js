@@ -1,11 +1,12 @@
-const playerChoice = prompt("Play 5 rounds! Rock, paper, or scissors?");
-playerChoice.toUpperCase();
-const computerChoice = computerPlay();
-
 var round = 0;
 var playerScore = 0;
 var computerScore = 0;
 var drawGame= 0;
+
+function computerPlay() {
+    const rpsChoices = ["Rock", "Paper", "Scissors"];
+    return rpsChoices[Math.floor(Math.random() * rpsChoices.length)];
+}
 
 //Plays 5 rounds of RPS
 game();
@@ -14,16 +15,21 @@ game();
 game();
 game();
 
-function computerPlay() {
-    const rpsRandom = ["Rock", "Paper", "Scissors"];
-    return rpsRandom[Math.floor(Math.random() * rpsRandom.length)];
-    /*Tests computer random choice
-    console.log(computerChoice);
-    */
-}
-
 function game() {
-    playRound();
+    var playerChoice = prompt("Play 5 rounds! ROCK, PAPER, or SCISSORS?");
+    //playerChoice.toUpperCase();
+    var computerChoice = computerPlay();
+
+    console.log(`Computer's choice: ${computerChoice}`);
+
+    console.log(playRound());
+
+    console.log(`Round ${round} completed!
+Player: ${playerScore}
+Computer: ${computerScore}
+Draw game(s): ${drawGame}`);
+
+console.log(alertFinalResult());
     
     function playRound() {
         //Condition for draw games
@@ -66,12 +72,7 @@ function game() {
             }
             else {
                 alert("Invalid input. Try again.");
-            }
-
-        return `Round ${round} completed! + '\n'
-                    Player: ${playerScore} + '\n'
-                    Computer: ${computerScore} + '\n'
-                    Draw game(s): ${drawGame}`;      
+            }  
     }
 
     function alertFinalResult() {
@@ -84,6 +85,6 @@ function game() {
             else if (round == 5 && playerscore == computerScore) {
                 alert("The game is a draw.")
             }
+            else return "To the next round..."
     }
-    alertFinalResult()
 }
