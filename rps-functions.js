@@ -24,7 +24,7 @@ function computerPlay() {
 
 function game() {
     playRound();
-
+    
     function playRound() {
         //Condition for draw games
         if (playerChoice == computerChoice) {
